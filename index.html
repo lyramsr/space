@@ -51,7 +51,7 @@
     <meta name="theme-color" content="#00B050">
     <style>
         body {
-            background-image: #262626 url(/artlides.gif);
+            background-image: url(/artlides.gif) #262626;
             background-position: top center;
             background-attachment: fixed;
             background-size: cover;
@@ -72,6 +72,13 @@
         }
     }
     </style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+ <script>
+  $(document).ready(function() {
+    $("body").hide();
+    $("body").delay(2000).fadeIn(2000);
+  });
+ </script>
 </head>
 <body>
     <div id="alpha">
