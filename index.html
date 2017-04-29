@@ -63,12 +63,15 @@
         padding: 0;
     }
     #alpha {
+        display: inline-block;
+    }
+    .gamma {
         display: block;
         width: auto;
         height: 31%;
         margin: auto;
     }
-    #delta {
+    .delta {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -78,8 +81,9 @@
 </style>
 </head>
 <body>
-<img id="alpha" src="//dummyimage.com/170x230">
-    <div id="delta">
+<div id="alpha">
+    <img class="gamma" src="//dummyimage.com/170x230">
+    <div class="delta">
         <a href="https://wolflambert.bandcamp.com/">
             <img src="/delta.png">
         </a>
