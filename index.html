@@ -62,39 +62,32 @@
     }
     #delta {
         position: fixed;
-        width: 170px;
-        height: 230px;
-        top: 50%;
-        left: 50%;
-        margin: -115px 0 0 -85px;
+        width: 100vw;
+        height: 35vh;
+        top: 50vh;
+        margin-top: -20vh;
+    }
+    #delta > img {
+        display: block;
+        height: 100%;
+        width: auto;
+        margin: 0 auto;
     }
 </style>
 </head>
 <body>
 <div id="alpha">
     <div id="delta">
-        <a href="https://wolflambert.bandcamp.com/">
-            <img src="/delta.png">
-        </a>
-        <table border="0" cellpadding="0" cellspacing="17.5">
-            <tr>
-                <td>
-                    <a href="https://twitter.com/wolflambert">
-                        <img src="/Twitter.png" height="34" width="34">
-                    </a>
-                </td>
-                <td>
-                    <a href="https://facebook.com/wolfldeltambert">
-                        <img src="/Facebook.png" height="34" width="34">
-                    </a>
-                </td>
-                <td>
-                    <a href="https://soundcloud.com/wolflambert">
-                        <img src="/Soundcloud.png" height="34" width="34">
-                    </a>
-                </td>
-            </tr>
-        </table>
+        <img src="imagemap.png" usemap="#map"/>
+        <map name="map">
+            <area shape="rect" coords="689, 1386, 950, 1569" href="https://last.fm/user/wolflambert">
+            <area shape="rect" coords="327, 1402, 620, 1564" href="https://soundcloud.com/wolflambert">
+            <area shape="rect" coords="0, 1366, 268, 1591" href="https://youtube.com/wolflambert">
+            <area shape="rect" coords="683, 1012, 950, 1298" href="https://facebook.com/wolfldeltambert">
+            <area shape="rect" coords="328, 1011, 623, 1297" href="https://instagram.com/wolflambert">
+            <area shape="rect" coords="0, 1028, 268, 1289" href="https://twitter.com/wolflambert">
+            <area shape="rect" coords="25, 25, 925, 925" href="https://wolflambert.bandcamp.com/">
+        </map>
     </div>
 </div>
 </body>
