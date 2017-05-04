@@ -99,6 +99,20 @@
             margin: 0 auto;
         }
         
+        #mail {
+            position: fixed;
+            width: 100vw;
+            height: 5.5vh;
+            bottom: 5.5vh;
+        }
+        
+        #mail > a > img {
+            display: block;
+            height: 100%;
+            width: auto;
+            margin: 0 5.5vw 0 auto;
+        }
+        
         #alpha {
             height: 100%;
             width: 100%;
@@ -130,6 +144,11 @@
         $('map').imageMapResize();
 
     </script>
+    <div id="mail">
+        <a href="mailto:hi@wolflambert.space">
+            <img src="/mail.gif" alt="Mail" title="Mail" />
+        </a>
+    </div>
     <div id="alpha"></div>
 </body>
 
