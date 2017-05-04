@@ -80,14 +80,6 @@
         margin: 0;
         padding: 0;
     }
-    #alpha {
-        height: 100%;
-        width: 100%;
-        background: url(/artlides%20overlay.gif);
-        background-position: top center;
-        background-attachment: fixed;
-        background-size: cover;
-    }
     #delta {
         position: fixed;
         width: 100vw;
@@ -101,10 +93,17 @@
         width: auto;
         margin: 0 auto;
     }
+    #alpha {
+        height: 100%;
+        width: 100%;
+        background: url(/artlides%20overlay.gif);
+        background-position: top center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
 </style>
 </head>
 <body>
-<div id="alpha"></div>
 <div id="delta">
     <img src="/imagemap.gif" usemap="#map"/>
     <map name="map">
@@ -122,5 +121,6 @@
 <script type="text/javascript">
     $('map').imageMapResize();
 </script>
+<div id="alpha"></div>
 </body>
 </html>
