@@ -1,21 +1,3 @@
-@-webkit-keyframes roll {
-    from {
-        -webkit-transform: rotate(0deg)
-    }
-    to {
-        -webkit-transform: rotate(360deg)
-    }
-}
-
-@-moz-keyframes roll {
-    from {
-        -moz-transform: rotate(0deg)
-    }
-    to {
-        -moz-transform: rotate(360deg)
-    }
-}
-
 @keyframes roll {
     from {
         transform: rotate(0deg)
@@ -26,10 +8,7 @@
 }
 
 body {
-    -moz-animation-name: roll;
-    -moz-animation-duration: 3s;
-    -moz-animation-iteration-count: 1;
-    -webkit-animation-name: roll;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count: 1;
+    animation-name: roll;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
 }
