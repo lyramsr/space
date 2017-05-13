@@ -78,10 +78,12 @@
         }
         
         html,
-        body {
-            height: 100%;
+        body,
+        div {
             margin: 0;
             padding: 0;
+            height: 100%;
+            overflow: hidden;
         }
         
         #delta {
@@ -152,10 +154,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
     <script>
         Mousetrap.bind('up up down down left right left right b a', function() {
-            var css = document.createElement('style');
-            css.type = 'text/css';
-            css.innerHTML = '@-moz-keyframes roll{100%25{-moz-transform:rotate(360deg);}}@-o-keyframes roll{100%25{-o-transform:rotate(360deg);}}@-webkit-keyframes roll{100%25{-webkit-transform:rotate(360deg);}}body{-moz-animation-name:roll;-moz-animation-duration:4s;-moz-animation-iteration-count:1;-o-animation-name:roll;-o-animation-duration:4s;-o-animation-iteration-count:1;-webkit-animation-name:roll;-webkit-animation-duration:4s;-webkit-animation-iteration-count:1;}';
-            document.getElementsByTagName('head')[0].appendChild(css);
+            $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '/barrelroll.css') );
         });
     </script>
 </body>
