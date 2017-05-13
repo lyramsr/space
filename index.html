@@ -151,13 +151,17 @@
         $('map').imageMapResize();
     </script>
     <div id="alpha"></div>
+    <audio id="airhorn" src="/airhorn.ogg" preload="auto"></audio>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
     <script>
         Mousetrap.bind('up up down down left right left right b a', function() {
-            $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '/barrelroll.css') );
+            $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/barrelroll.css'));
         });
         Mousetrap.bind('0 1 1 8 9 9 9 8 8 1 9 9 9 1 1 9 7 2 5 3', function() {
-            window.open('https://www.youtube.com/embed/OCDV-YFIGO0?autoplay=1&rel=0&autohide=1&showinfo=0&controls=1','_blank');
+            window.open('https://www.youtube.com/embed/OCDV-YFIGO0?autoplay=1&rel=0&autohide=1&showinfo=0&controls=1', '_blank');
+        });
+        Mousetrap.bind('space space space space space', function() {
+            document.getElementById('airhorn').play();
         });
     </script>
 </body>
