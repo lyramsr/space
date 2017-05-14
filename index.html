@@ -175,7 +175,11 @@
             window.open('https://www.youtube.com/embed/OCDV-YFIGO0?autoplay=1&rel=0&autohide=1&showinfo=0&controls=1', '_blank');
         });
         Mousetrap.bind('space space space space space', function() {
+            document.title = "prank gone wrong in da hood ✓";
             document.getElementById('airhorn').play();
+            setTimeout(function() {
+                document.title = "Wolf Lambert";
+            }, 2000);
         });
         Mousetrap.bind('m a n d', function() {
             document.title = "MAND";
@@ -194,10 +198,12 @@
             }, 9000);
         });
         Mousetrap.bind('n y a n', function() {
+            document.title = "nyan nyan nyan nyan nyan";
             $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/nyan.css'));
             document.getElementById('nyan').play();
             setTimeout(function() {
                 $('link[rel=stylesheet][href~="/nyan.css"]').remove();
+                document.title = "Wolf Lambert";
             }, 31000);
         });
     </script>
