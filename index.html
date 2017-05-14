@@ -185,10 +185,16 @@
             document.title = "ΔΔΔ";
             $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/illuminati.css'));
             document.getElementById('illuminati').play();
+            setTimeout(function() {
+                $('link[rel=stylesheet][href~="/illuminati.css"]').remove();
+            }, 9000);
         });
         Mousetrap.bind('n y a n', function() {
             $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/nyan.css'));
             document.getElementById('nyan').play();
+            setTimeout(function() {
+                $('link[rel=stylesheet][href~="/nyan.css"]').remove();
+            }, 31000);
         });
     </script>
 </body>
