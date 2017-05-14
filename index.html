@@ -160,6 +160,7 @@
         $('map').imageMapResize();
     </script>
     <audio id="airhorn" src="/airhorn.wav" type="audio/wav" preload="auto"></audio>
+    <audio id="mand" src="/mand.wav" type="audio/wav" preload="auto"></audio>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
     <script>
         Mousetrap.bind('up up down down left right left right b a', function() {
@@ -170,6 +171,10 @@
         });
         Mousetrap.bind('space space space space space', function() {
             document.getElementById('airhorn').play();
+        });
+        Mousetrap.bind('m a n d', function() {
+            document.getElementById('mand').play();
+            document.title = "MAND";
         });
     </script>
 </body>
