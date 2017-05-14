@@ -162,6 +162,7 @@
     <audio id="airhorn" src="/airhorn.wav" type="audio/wav" preload="auto"></audio>
     <audio id="mand" src="/mand.wav" type="audio/wav" preload="auto"></audio>
     <audio id="illuminati" src="/illuminati.wav" type="audio/wav" preload="auto"></audio>
+    <audio id="nyan" src="/nyan.wav" type="audio/wav" preload="auto"></audio>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
     <script>
         Mousetrap.bind('up up down down left right left right b a', function() {
@@ -181,6 +182,10 @@
             document.title = "ΔΔΔ";
             $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/illuminati.css'));
             document.getElementById('illuminati').play();
+        });
+        Mousetrap.bind('n y a n', function() {
+            $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/nyan.css'));
+            document.getElementById('nyan').play();
         });
     </script>
 </body>
