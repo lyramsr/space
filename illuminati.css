@@ -6,3 +6,7 @@
 #glitch {
     display: none !important;
 }
+
+body {
+    cursor: url(/illuminaticursor.png), default !important;
+}

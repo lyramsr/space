@@ -180,6 +180,9 @@
         Mousetrap.bind('m a n d', function() {
             document.title = "MAND";
             document.getElementById('mand').play();
+            setTimeout(function() {
+                document.title = "Wolf Lambert";
+            }, 2500);
         });
         Mousetrap.bind('alt+j', function() {
             document.title = "ΔΔΔ";
@@ -187,6 +190,7 @@
             document.getElementById('illuminati').play();
             setTimeout(function() {
                 $('link[rel=stylesheet][href~="/illuminati.css"]').remove();
+                document.title = "Wolf Lambert";
             }, 9000);
         });
         Mousetrap.bind('n y a n', function() {
