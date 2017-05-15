@@ -10,8 +10,3 @@
 body {
     cursor: url(/nyancursor.gif), default !important;
 }
-
-#delta>img,
-#mail>img {
-    filter: drop-shadow(0px 0px 4px #262626);
-}
