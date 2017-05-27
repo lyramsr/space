@@ -122,6 +122,15 @@
             margin: 0 7.5vh 0 auto;
         }
         
+        #spotify {
+            width: 94.14px;
+            height: 28px;
+            position: absolute;
+            top: 7.5vh;
+            right: 7.5vh;
+            margin-top: -3px;
+        }
+        
         @media screen and (max-height: 570px) {
             #delta {
                 height: 216.59px;
@@ -136,6 +145,10 @@
                 height: 100%;
                 width: auto;
                 margin: 0 42.75px 0 auto;
+            }
+            #spotify {
+                top: 42.75px;
+                right: 42.75px;
             }
         }
         
@@ -177,6 +190,7 @@
     <script type="text/javascript">
         $('map').imageMapResize();
     </script>
+    <iframe id="spotify" src="https://open.spotify.com/follow/1/?uri=spotify:artist:4SEJBFjQLVEkHybTLmUZSp&size=basic&theme=dark&show-count=0" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
     <audio id="airhorn" src="/airhorn.wav" type="audio/wav" preload="auto"></audio>
     <audio id="mand" src="/mand.wav" type="audio/wav" preload="auto"></audio>
     <audio id="illuminati" src="/illuminati.wav" type="audio/wav" preload="auto"></audio>
