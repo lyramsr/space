@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+Sitemap: http://wolflambert.space/sitemap.xml
