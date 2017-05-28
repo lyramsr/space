@@ -260,18 +260,18 @@
             }, 2500);
         });
         Mousetrap.bind('alt+j', function() {
-            document.title = "ΔΔΔ";
-            $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/illuminati.css'));
             document.getElementById('illuminati').play();
+            document.title = "ΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔ";
+            $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/illuminati.css'));
             setTimeout(function() {
                 $('link[rel=stylesheet][href~="/illuminati.css"]').remove();
                 document.title = "Wolf Lambert";
             }, 9000);
         });
         Mousetrap.bind('n y a n', function() {
+            document.getElementById('nyan').play();
             document.title = "nyan nyan nyan nyan nyan";
             $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/nyan.css'));
-            document.getElementById('nyan').play();
             setTimeout(function() {
                 $('link[rel=stylesheet][href~="/nyan.css"]').remove();
                 document.title = "Wolf Lambert";
