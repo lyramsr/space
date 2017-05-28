@@ -84,6 +84,14 @@
             overflow: hidden;
         }
         
+        * {
+            transition: all 0.14s ease;
+        }
+        
+         ::selection {
+            background: transparent;
+        }
+        
         #alpha {
             height: 100%;
             width: 100%;
@@ -91,6 +99,7 @@
             background-position: top center;
             background-attachment: fixed;
             background-size: cover;
+            z-index: -3;
         }
         
         #delta {
@@ -106,6 +115,7 @@
             height: 100%;
             width: auto;
             margin: 0 auto;
+            z-index: 3;
         }
         
         #mail {
@@ -113,6 +123,7 @@
             width: 100vw;
             height: 5.5vh;
             bottom: 7.5vh;
+            pointer-events: none;
         }
         
         #mail>img {
@@ -120,6 +131,7 @@
             height: 100%;
             width: auto;
             margin: 0 7.5vh 0 auto;
+            pointer-events: all;
         }
         
         #spotify {
@@ -131,7 +143,7 @@
             margin-top: -3px;
         }
         
-        @media screen and (max-height: 570px) {
+        @media only screen and (max-height: 570px) {
             #delta {
                 height: 216.59px;
                 margin-top: -108.295px;
@@ -149,6 +161,33 @@
             #spotify {
                 top: 42.75px;
                 right: 42.75px;
+            }
+        }
+        
+        @media only screen and (min-width: 327px) and (max-width: 430px) {
+            #delta>img {
+                margin: 0 150.625px 0 auto;
+            }
+        }
+        
+        @media only screen and (min-width: 266px) and (max-width: 327px) {
+            #delta>img {
+                margin: 0 auto 0 48.625px;
+            }
+        }
+        
+        @media only screen and (max-width: 299px) {
+            #spotify {
+                opacity: 0;
+                pointer-events: none;
+                cursor: default;
+            }
+        }
+        
+        @media only screen and (max-width: 265px) {
+            #mail {
+                opacity: 0;
+                cursor: default;
             }
         }
         
