@@ -1,4 +1,5 @@
 User-agent: *
+Allow: /hi
 Disallow: /ntp
 
 Sitemap: http://wolflambert.space/sitemap.xml
