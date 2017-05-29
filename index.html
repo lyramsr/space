@@ -32,39 +32,40 @@
 
 <head>
     <title>Wolf Lambert</title>
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="114x114" href="/meta/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/meta/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/meta/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/meta/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/meta/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/meta/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/meta/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/meta/apple-icon-76x76.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/meta/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/meta/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/meta/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/meta/favicon-96x96.png">
+    <link rel="manifest" href="/meta/manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="description" content="All you touch + all you see = all your life will ever be">
     <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-config" content="/meta/browserconfig.xml">
     <meta name="msapplication-TileColor" content="#00B050">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="/meta/ms-icon-144x144.png">
     <meta name="theme-color" content="#00B050">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@wolflambert">
     <meta name="twitter:description" content="All you touch + all you see = all your life will ever be">
     <meta name="twitter:domain" content="http://wolflambert.space">
-    <meta name="twitter:image" content="/metaimg.jpg">
+    <meta name="twitter:image" content="/meta/metaimg.jpg">
     <meta name="twitter:image:height" content="1000px">
     <meta name="twitter:image:width" content="2000px">
     <meta name="twitter:site" content="@wolflambert">
     <meta name="twitter:title" content="Wolf Lambert">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:description" content="All you touch + all you see = all your life will ever be">
-    <meta property="og:image" content="/metaimg.jpg">
+    <meta property="og:image" content="/meta/metaimg.jpg">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:height" content="1000">
     <meta property="og:image:width" content="2000">
@@ -95,7 +96,7 @@
         #alpha {
             height: 100%;
             width: 100%;
-            background: url(/artlides.jpg);
+            background: url(/img/artlides.jpg);
             background-position: top center;
             background-attachment: fixed;
             background-size: cover;
@@ -159,7 +160,7 @@
         #glitch {
             height: 100%;
             width: 100%;
-            background: url(/artlides%20overlay.gif);
+            background: url(/img/artlides%20overlay.gif);
             background-position: top center;
             background-attachment: fixed;
             background-size: cover;
@@ -186,7 +187,7 @@
 <body>
     <div id="alpha">
         <div id="delta">
-            <img src="/imagemap.gif" usemap="#map">
+            <img src="/img/imagemap.gif" usemap="#map">
             <map name="map">
                 <area shape="rect" coords="0, 0, 950, 950" href="https://wolflambert.bandcamp.com/" alt="Bandcamp" title="Bandcamp">
                 <area shape="rect" coords="0, 1034, 240, 1274" href="/hi" alt="About" title="About">
@@ -203,21 +204,21 @@
         <div id="glitch"></div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/imageMapResizer.min.js"></script>
+    <script type="text/javascript" src="/script/imageMapResizer.min.js"></script>
     <script type="text/javascript">
         $('map').imageMapResize();
     </script>
     <iframe id="spotify" src="https://open.spotify.com/follow/1/?uri=spotify:artist:4SEJBFjQLVEkHybTLmUZSp&size=basic&theme=dark&show-count=0" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
-    <audio id="airhorn" src="/airhorn.wav" type="audio/wav" preload="auto"></audio>
-    <audio id="mand" src="/mand.wav" type="audio/wav" preload="auto"></audio>
-    <audio id="illuminati" src="/illuminati.wav" type="audio/wav" preload="auto"></audio>
-    <audio id="nyan" src="/nyan.wav" type="audio/wav" preload="auto"></audio>
+    <audio id="airhorn" src="/audio/airhorn.wav" type="audio/wav" preload="auto"></audio>
+    <audio id="mand" src="/audio/mand.wav" type="audio/wav" preload="auto"></audio>
+    <audio id="illuminati" src="/audio/illuminati.wav" type="audio/wav" preload="auto"></audio>
+    <audio id="nyan" src="/audio/nyan.wav" type="audio/wav" preload="auto"></audio>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
     <script>
         Mousetrap.bind('up up down down left right left right b a', function() {
-            $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/barrelroll.css'));
+            $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/script/barrelroll.css'));
             setTimeout(function() {
-                $('link[rel=stylesheet][href~="/barrelroll.css"]').remove();
+                $('link[rel=stylesheet][href~="/script/barrelroll.css"]').remove();
             }, 3250);
         });
         Mousetrap.bind('0 1 1 8 9 9 9 8 8 1 9 9 9 1 1 9 7 2 5 3', function() {
@@ -240,18 +241,18 @@
         Mousetrap.bind('alt+j', function() {
             document.title = "ΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔ";
             document.getElementById('illuminati').play();
-            $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/illuminati.css'));
+            $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/script/illuminati.css'));
             setTimeout(function() {
-                $('link[rel=stylesheet][href~="/illuminati.css"]').remove();
+                $('link[rel=stylesheet][href~="/script/illuminati.css"]').remove();
                 document.title = "Wolf Lambert";
             }, 9000);
         });
         Mousetrap.bind('n y a n', function() {
             document.title = "nyan nyan nyan nyan nyan";
             document.getElementById('nyan').play();
-            $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/nyan.css'));
+            $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/script/nyan.css'));
             setTimeout(function() {
-                $('link[rel=stylesheet][href~="/nyan.css"]').remove();
+                $('link[rel=stylesheet][href~="/script/nyan.css"]').remove();
                 document.title = "Wolf Lambert";
             }, 31000);
         });
