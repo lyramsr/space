@@ -1,5 +1,5 @@
 #alpha {
-    background: url(/illuminati.png) !important;
+    background: url(/img/illuminati.png) !important;
     background-position: center !important;
 }
 
@@ -8,5 +8,5 @@
 }
 
 body {
-    cursor: url(/illuminaticursor.png), default !important;
+    cursor: url(/img/illuminaticursor.png), default !important;
 }

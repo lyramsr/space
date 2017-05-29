@@ -1,5 +1,5 @@
 #alpha {
-    background: url(/nyan.gif) !important;
+    background: url(/img/nyan.gif) !important;
     background-position: center !important;
 }
 
@@ -8,5 +8,5 @@
 }
 
 body {
-    cursor: url(/nyancursor.gif), default !important;
+    cursor: url(/img/nyancursor.gif), default !important;
 }
