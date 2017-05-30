@@ -215,6 +215,11 @@
     <audio id="nyan" src="/audio/nyan.wav" type="audio/wav" preload="auto"></audio>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
     <script>
+        var airhorn = document.getElementById('airhorn')
+        var mand = document.getElementById('mand')
+        var nyan = document.getElementById('nyan')
+        var illuminati = document.getElementById('illuminati')
+
         Mousetrap.bind('up up down down left right left right b a', function() {
             $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/script/barrelroll.css'));
             setTimeout(function() {
@@ -226,35 +231,35 @@
         });
         Mousetrap.bind('space space space space space', function() {
             document.title = "prank gone wrong in da hood ✓";
-            document.getElementById('airhorn').play();
-            setTimeout(function() {
+            airhorn.play();
+            airhorn.onended = function() {
                 document.title = "Wolf Lambert";
-            }, 2000);
+            };
         });
         Mousetrap.bind('m a n d', function() {
             document.title = "MAND";
-            document.getElementById('mand').play();
-            setTimeout(function() {
+            mand.play();
+            mand.onended = function() {
                 document.title = "Wolf Lambert";
-            }, 2500);
+            };
         });
         Mousetrap.bind('alt+j', function() {
             document.title = "ΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔ";
-            document.getElementById('illuminati').play();
+            illuminati.play();
             $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/script/illuminati.css'));
-            setTimeout(function() {
+            illuminati.onended = function() {
                 $('link[rel=stylesheet][href~="/script/illuminati.css"]').remove();
                 document.title = "Wolf Lambert";
-            }, 9000);
+            };
         });
         Mousetrap.bind('n y a n', function() {
             document.title = "nyan nyan nyan nyan nyan";
-            document.getElementById('nyan').play();
+            nyan.play();
             $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', '/script/nyan.css'));
-            setTimeout(function() {
+            nyan.onended = function() {
                 $('link[rel=stylesheet][href~="/script/nyan.css"]').remove();
                 document.title = "Wolf Lambert";
-            }, 31000);
+            };
         });
     </script>
 </body>
