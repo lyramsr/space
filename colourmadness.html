@@ -63,10 +63,16 @@
 <body>
     <script src="/script/randomColor.min.js"></script>
     <script type="text/javascript">
+        var count = 0;
+        var title = document.title;
+
         function foreimeanfiveimeanfire() {
+            count++;
+            var newTitle = '(' + count + ') ' + title;
             document.bgColor = randomColor({
                 luminosity: 'bright'
             });
+            document.title = newTitle;
         }
 
         foreimeanfiveimeanfire();
