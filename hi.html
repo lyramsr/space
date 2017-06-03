@@ -137,11 +137,28 @@
             line-height: 140%;
         }
         
-        p {
+        p,
+        ul {
             font-weight: 200;
             font-size: 24px;
             margin-bottom: 10px;
             line-height: 140%;
+        }
+        
+        ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        
+        ul li {
+            padding-left: 1em;
+            text-indent: -1em;
+        }
+        
+        ul li:before {
+            content: ">";
+            padding-right: 12px;
         }
         
         a {
@@ -207,8 +224,14 @@
     <p>Feel free to <a href="mailto:hi@wolflambert.space">send me an email</a> if you'd like. I speak English and Dutch.</p><br>
     <h1>Music</h1>
     <iframe id="spotifyframe" src="https://open.spotify.com/embed?uri=spotify:album:0mboYNCX4q37rRzCIResxa" frameborder="0" allowtransparency="true"></iframe>
-    <p>If you don't have Spotify, <a href="http://smarturl.it/artlides" target"_blank">click here</a> to listen on other platforms!</p><br>
-    <h1>Also</h1>
-    <p>When you're on the index page, try typing <i>nyan</i>, the Konami code, pressing alt+J, and pressing the spacebar a couple of times :)</p><br>
+    <p>If you don't have Spotify, <a href="http://smarturl.it/artlides" target "_blank">click here</a> to listen on other platforms.</p><br>
+    <h1>Things</h1>
+    <ul>
+        <li>This page is set in <a href="https://github.com/be5invis/Iosevka" target="_blank">Iosevka</a>.</li>
+        <li><a href="/colourmadness" target="_blank">Colour madness</a> displays a new random colour every second. Be sure to open it on any public computers you happen to come across.</li>
+        <li>When you're on the index page, try typing <i>nyan</i>, the Konami code, pressing alt+J, and pressing the spacebar a couple of times :)</li>
+    </ul><br>
     <h1><a id="back" href="/">&lt;</a></h1>
 </body>
+
+</html>
