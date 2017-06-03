@@ -40,6 +40,6 @@
  ],
     "theme_color": "#262626",
     "background_color": "#262626",
-    "start_url": "colourmadness",
+    "start_url": "colourmadness.html",
     "display": "standalone"
 }
