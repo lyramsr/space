@@ -3,8 +3,9 @@
     background-position: center !important;
 }
 
-#glitch {
-    display: none !important;
+#glitch1,
+#glitch2 {
+    visibility: hidden !important;
 }
 
 body {

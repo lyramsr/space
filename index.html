@@ -160,13 +160,26 @@
             }
         }
         
-        #glitch {
+        #glitch1,
+        #glitch2 {
             height: 100%;
             width: 100%;
-            background: url(/img/artlides%20overlay.gif);
             background-position: top center;
             background-attachment: fixed;
             background-size: cover;
+            display: none;
+        }
+        
+        #glitch1 {
+            background: url(/img/artlides_glitch1.jpg);
+        }
+        
+        #glitch2 {
+            background: url(/img/artlides_glitch2.jpg);
+        }
+        
+        .visible {
+            display: block !important;
         }
     </style>
     <script type="text/javascript" src="/script/prefixfree.min.js"></script>
@@ -191,7 +204,7 @@
 <body>
     <div id="alpha">
         <div id="delta">
-            <img src="/img/imagemap.gif" usemap="#map">
+            <img id="imagemap" src="/img/imagemap.png" usemap="#map">
             <map name="map">
                 <area shape="rect" coords="0, 0, 950, 950" href="https://wolflambert.bandcamp.com/" alt="Bandcamp" title="Bandcamp">
                 <area shape="rect" coords="0, 1034, 240, 1274" href="/hi" alt="About" title="About">
@@ -205,12 +218,75 @@
                 <area shape="rect" coords="710, 1750, 950, 1990" href="mailto:hi@wolflambert.space" alt="Mail" title="Mail">
             </map>
         </div>
-        <div id="glitch"></div>
+        <div id="glitch1"></div>
+        <div id="glitch2"></div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="/script/imageMapResizer.min.js"></script>
     <script type="text/javascript">
         $('map').imageMapResize();
+    </script>
+    <script type="text/javascript">
+        function setwallglitch1() {
+            $('#glitch1').addClass("visible")
+        }
+
+        function setwall1() {
+            $('#glitch1').removeClass("visible")
+        }
+
+        function setwallglitch2() {
+            $('#glitch2').addClass("visible")
+        }
+
+        function setwall2() {
+            $('#glitch2').removeClass("visible")
+        }
+
+        function wallglitch() {
+            setTimeout(function() {
+                setwallglitch1();
+                setTimeout(function() {
+                    setwall1();
+                    setTimeout(function() {
+                        setwallglitch2();
+                        setTimeout(function() {
+                            setwall2();
+                        }, 200);
+                    }, 2000);
+                }, 100);
+            }, 9000);
+        }
+
+        wallglitch();
+        setInterval(wallglitch, 11300);
+    </script>
+    <script type="text/javascript">
+        function setmapglitch() {
+            $("#imagemap").attr('src', '/img/imagemap_glitch.png');
+        }
+
+        function setmap() {
+            $("#imagemap").attr('src', '/img/imagemap.png');
+        }
+
+        function mapglitch() {
+            setTimeout(function() {
+                setmapglitch();
+                setTimeout(function() {
+                    setmap();
+                    setTimeout(function() {
+                        setmapglitch();
+                        setTimeout(function() {
+                            setmap();
+                        }, 200);
+                    }, 4000);
+                }, 100);
+            }, 7000);
+        }
+
+        mapglitch();
+        setInterval(mapglitch, 11300);
     </script>
     <iframe id="spotify" src="https://open.spotify.com/follow/1/?uri=spotify:artist:4SEJBFjQLVEkHybTLmUZSp&size=basic&theme=dark&show-count=0" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
     <audio id="airhorn" src="/audio/airhorn.wav" type="audio/wav" preload="auto"></audio>

@@ -232,6 +232,38 @@
         <li>When you're on the index page, try typing <i>nyan</i>, the Konami code, pressing alt+J, and pressing the spacebar a couple of times :)</li>
     </ul><br>
     <h1><a id="back" href="/">&lt;</a></h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function setpicglitch1() {
+            $("#picture").attr('src', '/img/picture_glitch1.png');
+        }
+        
+        function setpicglitch2() {
+            $("#picture").attr('src', '/img/picture_glitch2.png');
+        }
+
+        function setpic() {
+            $("#picture").attr('src', '/img/picture.png');
+        }
+
+        function picglitch() {
+            setTimeout(function() {
+                setpicglitch1();
+                setTimeout(function() {
+                    setpic();
+                    setTimeout(function() {
+                        setpicglitch2();
+                        setTimeout(function() {
+                            setpic();
+                        }, 100);
+                    }, 2000);
+                }, 200);
+            }, 6000);
+        }
+
+        picglitch();
+        setInterval(picglitch, 8300);
+    </script>
 </body>
 
 </html>
