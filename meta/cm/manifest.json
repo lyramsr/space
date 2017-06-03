@@ -1,5 +1,5 @@
 {
-    "name": "Wolf Lambert",
+    "name": "Colour madness!",
     "icons": [
         {
             "src": "\/android-icon-36x36.png",
@@ -40,6 +40,6 @@
  ],
     "theme_color": "#00B050",
     "background_color": "#00B050",
-    "start_url": "index.html",
+    "start_url": "colourmadness",
     "display": "standalone"
 }

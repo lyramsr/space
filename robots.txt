@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /hi
+Allow: /colourmadness
 Disallow: /ntp
 
 Sitemap: http://wolflambert.space/sitemap.xml
