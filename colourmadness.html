@@ -61,11 +61,12 @@
 </head>
 
 <body>
+    <script src="/script/randomColor.min.js"></script>
     <script type="text/javascript">
         function foreimeanfiveimeanfire() {
-            var bg_colour = Math.floor(Math.random() * 16777215).toString(16);
-            bg_colour = "#" + ("000000" + bg_colour).slice(-6);
-            document.bgColor = bg_colour;
+            document.bgColor = randomColor({
+                luminosity: 'bright'
+            });
         }
 
         foreimeanfiveimeanfire();
