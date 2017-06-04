@@ -77,7 +77,7 @@
             document.bgColor = colour;
             document.title = newTitle;
         }
-        
+
         function brightt() {
             var colour = randomColor({
                 luminosity: 'bright'
@@ -90,16 +90,16 @@
             document.title = newTitle;
         }
 
-        waterkoker();
         fake.onended = function() {
             waterkoker();
         }
 
         window.onclick = function() {
-            brightt();
+            waterkoker();
         }
+
         document.onkeypress = function() {
-            brightt();
+            waterkoker();
         }
     </script>
 </body>
