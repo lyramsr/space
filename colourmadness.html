@@ -67,11 +67,13 @@
         var title = document.title;
 
         function foreimeanfiveimeanfire() {
-            count++;
-            var newTitle = '(' + count + ') ' + title;
-            document.bgColor = randomColor({
+            var colour = randomColor({
                 luminosity: 'bright'
             });
+            count++;
+            var newTitle = '(' + count + ') ' + title;
+            document.bgColor = colour;
+            document.querySelector('meta[name="theme-color"]').setAttribute("content", colour);
             document.title = newTitle;
         }
 
