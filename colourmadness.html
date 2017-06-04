@@ -72,8 +72,8 @@
             });
             count++;
             var newTitle = '(' + count + ') ' + title;
-            document.bgColor = colour;
             document.querySelector('meta[name="theme-color"]').setAttribute("content", colour);
+            document.bgColor = colour;
             document.title = newTitle;
         }
 
