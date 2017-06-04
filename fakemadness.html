@@ -56,17 +56,33 @@
     <meta name="msapplication-TileImage" content="/meta/cm/ms-icon-144x144.png">
     <meta name="theme-color" content="#262626">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url(/img/tik.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: contain;
+        }
+    </style>
 </head>
 
 <body>
     <audio id="fake" src="/audio/fake.wav" type="audio/wav" preload="auto"></audio>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/script/randomColor.min.js"></script>
     <script type="text/javascript">
         var fake = document.getElementById('fake')
         var count = 0;
         var title = document.title;
 
+        function hide() {
+            $('body').css('background-image', 'none');
+        }
+
         function waterkoker() {
+            hide();
+            waterkoker.called = true;
             var colour = randomColor({
                 luminosity: 'bright'
             });
@@ -95,11 +111,19 @@
         }
 
         window.onclick = function() {
-            waterkoker();
+            if (waterkoker.called) {
+                brightt();
+            } else {
+                waterkoker();
+            }
         }
 
         document.onkeypress = function() {
-            waterkoker();
+            if (waterkoker.called) {
+                brightt();
+            } else {
+                waterkoker();
+            }
         }
     </script>
 </body>
