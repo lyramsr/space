@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<!--
+                                                            
+                                                            
+                             ΔΔ                             
+                            ΔΔΔΔ                            
+                           ΔΔΔΔΔΔ                           
+                          ΔΔΔΔΔΔΔΔ                          
+                         ΔΔΔΔΔΔΔΔΔΔ                         
+                        ΔΔΔΔΔΔΔΔΔΔΔΔ                        
+                       ΔΔΔΔΔΔΔΔΔΔΔΔΔΔ                       
+                      ΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔ                      
+                     ΔΔΔΔΔΔΔΔΔ ΔΔΔΔΔΔΔΔ                     
+                    ΔΔΔΔΔΔΔΔΔ   ΔΔΔΔΔΔΔΔ                    
+                   ΔΔΔΔΔΔΔΔΔ     ΔΔΔΔΔΔΔΔ                   
+                                  ΔΔΔΔΔΔΔΔ                  
+                                    ΔΔΔΔΔΔΔ                 
+                                     ΔΔΔΔΔΔΔ                
+                                                            
+              ΔΔΔΔΔΔΔΔΔΔ                                    
+             ΔΔΔΔΔΔΔΔΔΔ                                     
+            ΔΔΔΔΔΔΔΔΔΔ                                      
+           ΔΔΔΔΔΔΔΔΔΔ                   ΔΔΔΔΔΔΔΔΔ           
+          ΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔ          
+         ΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔ         
+        ΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔ        
+       ΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔ       
+                                                            
+                                                             
+-->
+
+<head>
+    <title>Is da ne waterkoker?</title>
+    <link rel="apple-touch-icon" sizes="114x114" href="/meta/cm/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/meta/cm/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/meta/cm/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/meta/cm/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/meta/cm/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/meta/cm/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/meta/cm/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/meta/cm/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/meta/cm/apple-icon-76x76.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/meta/cm/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/meta/cm/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/meta/cm/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/meta/cm/favicon-96x96.png">
+    <link rel="manifest" href="/meta/cm/manifest.json">
+    <link rel="mask-icon" href="/meta/mask.svg" color="#00B050">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="author" content="Wolf Lambert">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-config" content="/meta/cm/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#262626">
+    <meta name="msapplication-TileImage" content="/meta/cm/ms-icon-144x144.png">
+    <meta name="theme-color" content="#262626">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+</head>
+
+<body>
+    <audio id="fake" src="/audio/fake.wav" type="audio/wav" preload="auto"></audio>
+    <script src="/script/randomColor.min.js"></script>
+    <script type="text/javascript">
+        var fake = document.getElementById('fake')
+        var count = 0;
+        var title = document.title;
+
+        function waterkoker() {
+            var colour = randomColor({
+                luminosity: 'bright'
+            });
+            count++;
+            var newTitle = '(' + count + ') ' + title;
+            document.querySelector('meta[name="theme-color"]').setAttribute("content", colour);
+            fake.play();
+            document.bgColor = colour;
+            document.title = newTitle;
+        }
+        
+        function brightt() {
+            var colour = randomColor({
+                luminosity: 'bright'
+            });
+            count++;
+            var newTitle = '(' + count + ') ' + title;
+            document.querySelector('meta[name="theme-color"]').setAttribute("content", colour);
+            fake.currentTime = 0;
+            document.bgColor = colour;
+            document.title = newTitle;
+        }
+
+        waterkoker();
+        fake.onended = function() {
+            waterkoker();
+        }
+
+        window.onclick = function() {
+            brightt();
+        }
+        document.onkeypress = function() {
+            brightt();
+        }
+    </script>
+</body>
+
+</html>
