@@ -126,9 +126,14 @@
             background: rgba(0, 176, 80, 0.4);
         }
         
+         ::selection {
+            background: #00B050;
+        }
+        
         * {
             margin: 0;
             padding: 0;
+            transition: all 0.14s ease;
         }
         
         body {
@@ -137,14 +142,6 @@
             color: #ffffff;
             padding: 45px 45px 20px 45px;
             overflow-x: hidden;
-        }
-        
-        * {
-            transition: all 0.14s ease;
-        }
-        
-         ::selection {
-            background: #00B050;
         }
         
          :root:before {
