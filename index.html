@@ -313,9 +313,11 @@
                 $('link[rel=stylesheet][href~="/script/barrelroll.css"]').remove();
             }, 3250);
         });
+        
         Mousetrap.bind('0 1 1 8 9 9 9 8 8 1 9 9 9 1 1 9 7 2 5 3', function() {
             window.open('https://www.youtube.com/embed/OCDV-YFIGO0?autoplay=1&rel=0&autohide=1&showinfo=0&controls=1', '_blank');
         });
+        
         Mousetrap.bind('space space space space space', function() {
             document.title = "prank gone wrong in da hood ✓";
             airhorn.play();
@@ -323,6 +325,7 @@
                 document.title = "Wolf Lambert";
             };
         });
+        
         Mousetrap.bind('m a n d', function() {
             document.title = "MAND";
             mand.play();
@@ -330,6 +333,7 @@
                 document.title = "Wolf Lambert";
             };
         });
+        
         Mousetrap.bind('alt+j', function() {
             document.title = "ΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔΔ";
             illuminati.play();
@@ -339,6 +343,7 @@
                 document.title = "Wolf Lambert";
             };
         });
+        
         Mousetrap.bind('n y a n', function() {
             document.title = "nyan nyan nyan nyan nyan";
             nyan.play();
@@ -347,6 +352,35 @@
                 $('link[rel=stylesheet][href~="/script/nyan.css"]').remove();
                 document.title = "Wolf Lambert";
             };
+        });
+        
+        Mousetrap.bind('b o u n c e', function() {
+            function width() {
+                $('#delta').css("width", "auto");
+            }
+            
+            function position() {
+                var h = $(window).height() - 50;
+                var w = $(window).width() - 50;
+
+                var nh = Math.floor(Math.random() * h);
+                var nw = Math.floor(Math.random() * w);
+
+                return [nh, nw];
+            }
+
+            function bounce() {
+                var newq = position();
+                $('#delta').animate({
+                    top: newq[0],
+                    left: newq[1]
+                });
+
+                bounce();
+            };
+            
+            width();
+            bounce();
         });
     </script>
 </body>
