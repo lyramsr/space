@@ -302,6 +302,7 @@
     <iframe id="spotify" src="https://open.spotify.com/follow/1/?uri=spotify:artist:4SEJBFjQLVEkHybTLmUZSp&size=basic&theme=dark&show-count=0" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
     <audio id="airhorn" src="/audio/airhorn.wav" type="audio/wav" preload="auto"></audio>
     <audio id="mand" src="/audio/mand.wav" type="audio/wav" preload="auto"></audio>
+    <audio id="no" src="/audio/no.wav" type="audio/wav" preload="auto"></audio>
     <audio id="illuminati" src="/audio/illuminati.wav" type="audio/wav" preload="auto"></audio>
     <audio id="nyan" src="/audio/nyan.wav" type="audio/wav" preload="auto"></audio>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
@@ -336,6 +337,14 @@
 
         Mousetrap.bind('m a n d', function() {
             document.title = "MAND";
+            mand.play();
+            mand.onended = function() {
+                document.title = "Wolf Lambert";
+            };
+        });
+        
+        Mousetrap.bind('n o', function() {
+            document.title = "NOOOOOOOOOOOOOOO!";
             mand.play();
             mand.onended = function() {
                 document.title = "Wolf Lambert";
