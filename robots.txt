@@ -4,4 +4,4 @@ Allow: /colourmadness
 Disallow: /ntp
 Disallow: /fakemadness
 
-Sitemap: http://wolflambert.space/sitemap.xml
+Sitemap: http://lyramsr.co/sitemap.xml
