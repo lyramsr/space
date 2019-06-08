@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /hi
 Allow: /colourmadness
+Disallow: /hoi
 Disallow: /ntp
 Disallow: /fakemadness
 
