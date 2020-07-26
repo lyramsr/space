@@ -4,5 +4,7 @@ Allow: /colourmadness
 Disallow: /hoi
 Disallow: /ntp
 Disallow: /fakemadness
+Disallow: /recensies
+Disallow: /muziekliga
 
 Sitemap: http://lyramsr.co/sitemap.xml
