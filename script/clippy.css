@@ -20,6 +20,7 @@
     max-width: 200px;
     min-width: 120px;
     font-family: "Iosevka", monospace;
+    font-weight: 300;
     font-size: 12pt;
     transition: none;
     height: 64px !important;
