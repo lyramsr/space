@@ -44,12 +44,11 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 
     <link rel="stylesheet" href="/iosevka/iosevka.css">
-    <link rel="stylesheet" type="text/css" href="/script/clippy.css" media="all">
 
     <style>
         body {
             background: #262626;
-            ::-webkit-user-select: none;
+            : :-webkit-user-select: none;
         }
 
         html,
@@ -230,7 +229,6 @@
     <audio id="no" src="/audio/no.wav" type="audio/wav" preload="auto"></audio>
     <audio id="illuminati" src="/audio/illuminati.wav" type="audio/wav" preload="auto"></audio>
     <audio id="nyan" src="/audio/nyan.wav" type="audio/wav" preload="auto"></audio>
-    <script src="/script/clippy.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
     <script>
         var airhorn = document.getElementById('airhorn')
@@ -324,19 +322,6 @@
 
             width();
             bounce();
-        });
-
-        Mousetrap.bind('c l i p p y', function() {
-            Mousetrap.bind('c l i p p y', function() {});
-            clippy.load('Clippy', function(agent) {
-                agent.show();
-                agent.speak("I see you are visiting lyra’s website! would you like some help?");
-                setTimeout(function() {
-                    setInterval(function() {
-                        agent.animate();
-                    }, 8000);
-                }, 1000);
-            });
         });
 
     </script>
