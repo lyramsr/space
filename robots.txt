@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /hi
+Allow: /etc
+Allow: /music
 Allow: /colourmadness
 Disallow: /hoi
 Disallow: /ntp
