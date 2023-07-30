@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-UK">
+<html>
 
 <head>
-    <title>hi!</title>
+    <title>lyra messier</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/meta/favicon-32x32.png">
@@ -25,7 +25,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@lyramsr">
-    <meta name="twitter:description" content="hi!">
+    <meta name="twitter:description" content="new music out now">
     <meta name="twitter:domain" content="http://lyramsr.co">
     <meta name="twitter:image" content="/meta/metaimg.jpg">
     <meta name="twitter:image:height" content="1000px">
@@ -33,7 +33,7 @@
     <meta name="twitter:site" content="@lyramsr">
     <meta name="twitter:title" content="lyra messier">
 
-    <meta property="og:description" content="hi!">
+    <meta property="og:description" content="new music out now">
     <meta property="og:image" content="/meta/metaimg.jpg">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:height" content="1000">
@@ -43,135 +43,72 @@
 
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i&subset=latin-ext">
     <link rel="stylesheet" href="/iosevka/iosevka.css">
 
     <style>
-        ::-webkit-scrollbar {
-            width: 10px;
-            background: var(--arc-palette-background, #262626);
+        body {
+            background: #262626;
+            : :-webkit-user-select: none;
         }
 
-        ::-webkit-scrollbar-track {
-            border-radius: 5px;
-            background: var(--arc-palette-background, #262626);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            border-radius: 5px;
-            background: var(--arc-palette-foregroundTertiary, #218D78);
-            background: var(--arc-palette-foregroundTertiary, #218D78);
-            opacity: 60%;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--arc-palette-foregroundTertiary, #218D78);
-        }
-
-        ::-webkit-scrollbar-thumb:window-inactive {
-            background: var(--arc-palette-background, #262626);
+        html,
+        body,
+        div {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
         }
 
         ::selection {
-            background: var(--arc-palette-foregroundTertiary, #218D78);
+            background: transparent;
         }
 
         * {
-            margin: 0;
-            padding: 0;
             transition: all 0.14s ease;
         }
 
-        body {
-            background: var(--arc-palette-background, #262626);
-            font-family: Source Sans Pro, sans-serif;
-            font-weight: 400;
-            color: #ffffff;
-            padding: 5px 45px 25px 45px;
-            overflow-x: hidden;
-        }
-
         :root:before {
-            content: url(/img/picture_glitch1.jpg) url(/img/picture_glitch2.jpg);
+            content: url(/img/music/imagemap_glitch.png);
             visibility: hidden;
             position: absolute;
             left: -999em;
         }
 
-        h1 {
-            margin-top: 25px;
-            font-weight: 300;
-            font-size: 70px;
-            line-height: 140%;
-            font-family: Iosevka, monospace;
+        #alpha {
+            height: 100%;
+            width: 100%;
+            background: url(/img/music/wall.jpg);
+            background-position: bottom center;
+            background-attachment: fixed;
+            background-size: cover;
         }
 
-        p,
-        ul {
-            font-weight: 400;
-            font-size: 24px;
-            margin-bottom: 10px;
-            line-height: 140%;
+        #delta {
+            position: fixed;
+            width: 100vw;
+            height: 70vh;
+            top: 50vh;
+            margin-top: -35vh;
         }
 
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+        #delta>img {
+            display: block;
+            height: 100%;
+            width: auto;
+            margin: 0 auto;
+            filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.8));
         }
 
-        ul li {
-            padding-left: 1em;
-            text-indent: -1em;
-        }
-
-        ul li:before {
-            content: ">";
-            padding-right: 12px;
-        }
-
-        i {
-            font-style: italic;
-        }
-
-        a,
-        u {
-            color: #ffffff;
-            text-decoration: underline;
-            text-decoration-skip: ink;
-        }
-
-        a:hover {
-            color: var(--arc-palette-foregroundSecondary, #218D78);
-        }
-
-        #back {
-            color: var(--arc-palette-foregroundSecondary, #218D78);
-            text-decoration: none;
-        }
-
-        #picture {
-            margin: 10px 0 15px 0;
-            width: 500px;
-            height: auto;
-        }
-
-        #spotifyframe {
-            margin: 10px 0 10px 0;
-            width: 500px;
-            height: 420px;
-            border-radius: 0px;
-            /* background: linear-gradient(180deg, #2a2a2a 0%, #2a2a2a 50%, #242424 50%, #242424 100%); */
-        }
-
-        @media only screen and (max-width: 589px) {
-            #picture {
-                width: 100%;
+        @media only screen and (max-height: 570px) {
+            #delta {
+                height: 400px;
+                margin-top: -200px;
             }
+        }
 
-            #spotifyframe {
-                width: 100%;
-            }
+        .visible {
+            display: block !important;
         }
 
     </style>
@@ -179,56 +116,55 @@
 </head>
 
 <body>
-    <h1>hi!</h1>
-    <p>I’m lyra (<i>'lie-ruh</i>). this is my website. I coded it in <a draggable="true" href="http://brackets.io/" target="_blank">brackets.</a> the source is available <a draggable="true" href="https://github.com/lyramsr/space" target="_blank">on github.</a></p>
-    <h1>about</h1>
-    <p>I’m a musician by night who does various vaguely related things by day. I live in belgium. here’s a picture of me:</p>
-    <img id="picture" src="/img/picture.jpg">
-    <p>feel free to <a draggable="true" href="mailto:hi@lyramsr.co">send me an email</a> if you’d like. I speak english and dutch.</p>
-    <h1>music</h1>
-    <iframe id="spotifyframe" src="https://open.spotify.com/embed/album/3vDMIpplaqmXj4qIllpp7b?utm_source=generator&theme=0" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture; transparency" loading="lazy"></iframe>
-    <h1>things</h1>
-    <ul>
-        <li>this page is set in <a draggable="true" href="https://typeof.net/Iosevka/" target="_blank">iosevka</a> and <a draggable="true" href="https://adobe-fonts.github.io/source-sans/" target="_blank">source sans pro.</a></li>
-        <li><a draggable="true" href="spotify:user:1177893690:playlist:0uj4GTVtUVQCNjJca65IGt">here</a>’s a spotify playlist featuring some of my favourite music. if you prefer a detailed log of my listening habits, you can head over to my <a draggable="true" href="https://last.fm/user/lyramsr" target="_blank">last.fm.</a></li>
-        <li><a draggable="true" href="/colourmadness" target="_blank">colour madness</a> displays a new random colour every second. make sure to open it on any public computers you happen to come across.</li>
-        <li>drag <a id="bookmarklet" draggable="true" href="javascript:!function(e){var%20a=function(e){e(%22%3Cstyle%20id='barrelroll'%20type='text/css'%3E%40keyframes%20roll{from{transform:rotate(0)}to{transform:rotate(360deg)}}body{animation-name:roll;animation-duration:3s;animation-iteration-count:1}%3C/style%3E%22).appendTo(%22head%22),setTimeout(function(){e(%22%23barrelroll%22).remove()},3250)};if(e%26%26e.fn%26%26parseFloat(e.fn.jquery)%3E=1.7)a(e);else{var%20t=document.createElement(%22script%22);t.src=%22//ajax.googleapis.com/ajax/libs/jquery/1/jquery.js%22,t.onload=t.onreadystatechange=function(){var%20e=this.readyState;e%26%26%22loaded%22!==e%26%26%22complete%22!==e||a(jQuery.noConflict())}}document.getElementsByTagName(%22head%22)[0].appendChild(t)}(window.jQuery);">this link</a> to your bookmarks and click it anywhere to make the page you’re viewing do a barrel roll.</li>
-        <li>subtle hint: when you’re on the index page, try typing <i>nyan</i>, <i>clippy</i>, <i>bounce</i>, or <i>no</i>, entering the konami code, pressing <i>alt+J</i>, and hitting the spacebar a couple times :)</li>
-    </ul>
-    <h1><a draggable="true" id="back" href="/">&lt;</a></h1>
+    <div id="alpha">
+        <div id="delta">
+            <img draggable="false" id="imagemap" src="/img/music/imagemap.png" usemap="#map">
+            <map name="map">
+                <area shape="rect" coords="126, 395, 799, 626" href="https://open.spotify.com/track/7ynfAbNlk81T428tNwo6wb" alt="Listen on Spotify" title="Listen on Spotify" target="_blank">
+                <area shape="rect" coords="139, 633, 783, 871" href="https://music.apple.com/album/genie-single/1699826616" alt="Listen on Apple Music" title="Listen on Apple Music" target="_blank">
+                <area shape="rect" coords="139, 896, 720, 1128" href="https://lyramsr.bandcamp.com/track/genie" alt="Buy on Bandcamp" title="Buy on Bandcamp" target="_blank">
+                <area shape="rect" coords="139, 1151, 786, 1367" href="https://music.youtube.com/watch?v=SwxS6UecPWU" alt="Listen on YouTube Music" title="Listen on YouTube Music" target="_blank">
+                <area shape="rect" coords="182, 2239, 766, 2380" href="/" alt="lyramsr.co" title="lyramsr.co">
+            </map>
+        </div>
+        <div id="glitch1"></div>
+        <div id="glitch2"></div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/script/imageMapResizer.min.js"></script>
     <script type="text/javascript">
-        function setpicglitch1() {
-            $("#picture").attr('src', '/img/picture_glitch1.jpg');
-        }
-
-        function setpicglitch2() {
-            $("#picture").attr('src', '/img/picture_glitch2.jpg');
-        }
-
-        function setpic() {
-            $("#picture").attr('src', '/img/picture.jpg');
-        }
-
-        function picglitch() {
-            setTimeout(function() {
-                setpicglitch1();
-                setTimeout(function() {
-                    setpic();
-                    setTimeout(function() {
-                        setpicglitch2();
-                        setTimeout(function() {
-                            setpic();
-                        }, 150);
-                    }, 2000);
-                }, 180);
-            }, 6100);
-        }
-
-        picglitch();
-        setInterval(picglitch, 8430);
+        $('map').imageMapResize();
 
     </script>
+    <script type="text/javascript">
+        function setmapglitch() {
+            $("#imagemap").attr('src', '/img/music/imagemap_glitch.png');
+        }
+
+        function setmap() {
+            $("#imagemap").attr('src', '/img/music/imagemap.png');
+        }
+
+        function mapglitch() {
+            setTimeout(function() {
+                setmapglitch();
+                setTimeout(function() {
+                    setmap();
+                    setTimeout(function() {
+                        setmapglitch();
+                        setTimeout(function() {
+                            setmap();
+                        }, 180);
+                    }, 4000);
+                }, 150);
+            }, 7000);
+        }
+
+        mapglitch();
+        setInterval(mapglitch, 11330);
+
+    </script>
+
 </body>
 
 </html>
