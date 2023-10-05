@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>lyra messier</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/meta/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/meta/favicon-16x16.png">
+    <link rel="manifest" href="/meta/site.webmanifest">
+    <link rel="shortcut icon" href="/meta/favicon.ico">
+    <link rel="mask-icon" href="/meta/safari-pinned-tab.svg" color="#218D78">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="lyra messier">
+    <meta name="application-name" content="lyra messier">
+    <meta name="msapplication-TileColor" content="#1c806c">
+    <meta name="msapplication-config" content="/meta/browserconfig.xml">
+    <meta name="theme-color" content="#1c806c">
+
+    <meta name="author" content="lyra messier">
+    <meta name="description" content="hi!">
+    <meta name="keywords" content="lyra, messier, msr, lyramsr, lyra lambert, lyra braekevelt, music, musician, belgium, muziek, muzikant, album, song, artificial, light, destroyer, spacetravelisfinite, cut, the, lights">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@lyramsr">
+    <meta name="twitter:description" content="new music out now">
+    <meta name="twitter:domain" content="http://lyramsr.co">
+    <meta name="twitter:image" content="/meta/music/metaimg.jpg">
+    <meta name="twitter:image:height" content="1000px">
+    <meta name="twitter:image:width" content="2000px">
+    <meta name="twitter:site" content="@lyramsr">
+    <meta name="twitter:title" content="lyra messier – “Genie”">
+
+    <meta property="og:description" content="new music out now">
+    <meta property="og:image" content="/meta/music/metaimg.jpg">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:height" content="1000">
+    <meta property="og:image:width" content="2000">
+    <meta property="og:site_name" content="lyra messier – “Genie”">
+    <meta property="og:title" content="lyra messier – “Genie”">
+    <meta property="og:url" content="http://lyramsr.co/music">
+
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/iosevka/iosevka.css">
+
+    <style>
+        body {
+            background: #262626;
+            : :-webkit-user-select: none;
+        }
+
+        html,
+        body,
+        div {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        ::selection {
+            background: transparent;
+        }
+
+        * {
+            transition: all 0.14s ease;
+        }
+
+        :root:before {
+            content: url(/img/music/genie/imagemap_glitch.png);
+            visibility: hidden;
+            position: absolute;
+            left: -999em;
+        }
+
+        #alpha {
+            height: 100%;
+            width: 100%;
+            background: url(/img/music/genie/wall.jpg);
+            background-position: bottom center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #delta {
+            position: fixed;
+            width: 100vw;
+            height: 70vh;
+            top: 50vh;
+            margin-top: -35vh;
+        }
+
+        #delta>img {
+            display: block;
+            height: 100%;
+            width: auto;
+            margin: 0 auto;
+            filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.8));
+        }
+
+        @media only screen and (max-height: 570px) {
+            #delta {
+                height: 400px;
+                margin-top: -200px;
+            }
+        }
+
+        .visible {
+            display: block !important;
+        }
+
+    </style>
+    <script type="text/javascript" src="/script/prefixfree.min.js"></script>
+</head>
+
+<body>
+    <div id="alpha">
+        <div id="delta">
+            <img draggable="false" id="imagemap" src="/img/music/genie/imagemap.png" usemap="#map">
+            <map name="map">
+                <area shape="rect" coords="126, 395, 799, 626" href="https://open.spotify.com/track/7ynfAbNlk81T428tNwo6wb" alt="Listen on Spotify" title="Listen on Spotify" target="_blank">
+                <area shape="rect" coords="139, 633, 783, 871" href="https://music.apple.com/album/genie-single/1699826616" alt="Listen on Apple Music" title="Listen on Apple Music" target="_blank">
+                <area shape="rect" coords="139, 896, 720, 1128" href="https://lyramsr.bandcamp.com/track/genie" alt="Buy on Bandcamp" title="Buy on Bandcamp" target="_blank">
+                <area shape="rect" coords="139, 1151, 786, 1367" href="https://music.youtube.com/watch?v=SwxS6UecPWU" alt="Listen on YouTube Music" title="Listen on YouTube Music" target="_blank">
+                <area shape="rect" coords="182, 2239, 766, 2380" href="/" alt="lyramsr.co" title="lyramsr.co">
+            </map>
+        </div>
+        <div id="glitch1"></div>
+        <div id="glitch2"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/script/imageMapResizer.min.js"></script>
+    <script type="text/javascript">
+        $('map').imageMapResize();
+
+    </script>
+    <script type="text/javascript">
+        function setmapglitch() {
+            $("#imagemap").attr('src', '/img/music/imagemap_glitch.png');
+        }
+
+        function setmap() {
+            $("#imagemap").attr('src', '/img/music/imagemap.png');
+        }
+
+        function mapglitch() {
+            setTimeout(function() {
+                setmapglitch();
+                setTimeout(function() {
+                    setmap();
+                    setTimeout(function() {
+                        setmapglitch();
+                        setTimeout(function() {
+                            setmap();
+                        }, 180);
+                    }, 4000);
+                }, 150);
+            }, 7000);
+        }
+
+        mapglitch();
+        setInterval(mapglitch, 11330);
+
+    </script>
+
+</body>
+
+</html>
